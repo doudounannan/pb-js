@@ -30,9 +30,27 @@ $ npm test
 $ PROTOC=/usr/local/bin/protoc npm test
 ```
 
+如果 `npm test` 过后多了一个 commonjs_out 的目录并且如下图所示，说明测试通过
+
+![测试图](http://doudou-space.qiniudn.com/pb_test.png)
+
 ## 示例
+
+```bash
+# 将 proto 目录下的 introduction.proto 拷贝到 项目根目录下的 proto-3.6.0/js 中
+# 使用 protoc 根据 proto 文件 生成对应的 js 文件
+$ ./src/protoc --js_out=import_style=commonjs,binary:. introduction.proto
+# 拷贝生成的 introduction_pb.js 到根目录下的 examples 的 _pbjs 中
+# 这样所需的 message api 就生成好了
+$ cd examples
+$ node index.js
+# 以上生成对应的 proto 文件
+# proto 文件生成 json
+$ npm run pbjs
+```
 
 ## 参考文档
 
 [protobuf](https://github.com/google/protobuf/tree/master/js)
 [介绍protobuf](https://www.ibm.com/developerworks/cn/linux/l-cn-gpb/index.html)
+[protobuf.js](https://github.com/dcodeIO/protobuf.js)

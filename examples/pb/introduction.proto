@@ -1,0 +1,6 @@
+{ wrappers_: null,
+  messageId_: undefined,
+  arrayIndexOffset_: -1,
+  array: [ 'mumu', 28, 'baidu' ],
+  pivot_: 1.7976931348623157e+308,
+  convertedFloatingPointFields_: {} }
