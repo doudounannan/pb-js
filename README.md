@@ -39,7 +39,7 @@ $ PROTOC=/usr/local/bin/protoc npm test
 ```bash
 # 将 proto 目录下的 introduction.proto 拷贝到 项目根目录下的 proto-3.6.0/js 中
 # 使用 protoc 根据 proto 文件 生成对应的 js 文件
-$ ./src/protoc --js_out=import_style=commonjs,binary:. introduction.proto
+$ ../src/protoc --js_out=import_style=commonjs,binary:. introduction.proto
 # 拷贝生成的 introduction_pb.js 到根目录下的 examples 的 _pbjs 中
 # 这样所需的 message api 就生成好了
 $ cd examples
